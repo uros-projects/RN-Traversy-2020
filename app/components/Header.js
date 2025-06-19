@@ -1,12 +1,15 @@
-
 import { StyleSheet, Text, View } from 'react-native';
 
-const Header = () => {
+const Header = ({ title }) => {
 	return (
 		<View style={styles.header}>
-			<Text style={styles.text}>Hello World</Text>
+			<Text style={styles.text}>{title}</Text>
 		</View>
 	);
+};
+
+Header.defaultProps = {
+	title: 'Shopping List',
 };
 
 const styles = StyleSheet.create({
